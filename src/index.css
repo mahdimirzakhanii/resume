@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #070f2b;
+  --secondary-color: #00c7c0;
+  --tertiary-color: #ebeeff;
+  --gradient-color: linear-gradient(180deg, rgba(7, 15, 43, 0) 0%, #00c7c0 350%);
+  --gradient-color1: linear-gradient(180deg, rgba(0, 199, 192, 0) 0%, #006763 120%);
+}
+
+@layer utilities {
+  .bg-ligh {
+    background: var(--gradient-color1);
+  }
+}
+
+/*  End backGround Skills  */
+
+
+
+/*  Start Navbar-Hover  */
+@layer utilities {
+  .link-hover {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+  }
+
+  .link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width .5s ease;
+    -webkit-transition: width .5s ease;
+    -moz-transition: width .5s ease;
+    -ms-transition: width .5s ease;
+    -o-transition: width .5s ease;
+  }
+
+  .link-hover:hover {
+    color: var(--secondary-color);
+  }
+
+  .link-hover:focus {
+    color: var(--secondary-color);
+  }
+
+  .link-hover:hover::after {
+    width: 100%;
+  }
+}
+
+/*  End Navbar-Hover  */
+
+
+
+/* Start Titles  */
+@layer utilities {
+  .title::before {
+    content: '';
+    position: absolute;
+    left: -110px;
+    bottom: 15px;
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: 2px;
+  }
+
+  .title::after {
+    content: '';
+    position: absolute;
+    right: -110px;
+    bottom: 15px;
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .title::before {
+    content: '';
+    left: -80px;
+    width: 70px;
+  }
+
+  .title::after {
+    content: '';
+    right: -80px;
+    width: 70px;
+  }
+
+}
+
+/* End Titles  */
+
+
+/* Start Socials-Hover  */
+
+@layer utilities {
+  @media screen and (min-width: 768px) {
+
+
+    .socials {
+      position: relative;
+    }
+
+    .socials a {
+      opacity: 0;
+      width: max-content;
+      visibility: hidden;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 50%;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+
+    .socials:hover a {
+      opacity: 1;
+      top: -50px;
+      visibility: visible;
+      width: max-content;
+    }
+  }
+}
+
+/* End   Socials-Hover  */
+
+
+
+
+/* start scrollBar  */
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--primary-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--tertiary-color) var(--primary-color);
+  }
+}
+
+/* end scrollBar  */
+
+
+/*  Start backGround Skills  */
+@media (prefers-color-scheme: dark) {
+  .bg-dark {
+    background: var(--gradient-color);
+  }
+}
