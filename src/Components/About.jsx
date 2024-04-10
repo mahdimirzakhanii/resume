@@ -3,7 +3,13 @@ function About() {
   return (
     <div className="about flex relative flex-col lg:flex-row justify-around items-center mt-56 ">
       {/* start image about  */}
-      <div className="img-about relative w-full md:w-5/12">
+      <div
+        className="img-about relative w-full md:w-5/12"
+        data-aos="fade-left"
+        data-aos-offset="100"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+      >
         <div className="relative inset-0 flex items-center justify-center">
           <div className="bg-secondary opacity-25 rounded-full w-[280px] h-[280px] md:w-[380px] md:h-[380px] relative"></div>
           <img
@@ -16,7 +22,13 @@ function About() {
       {/* end image about  */}
 
       {/* start text about  */}
-      <div className="text-about w-full lg:w-5/12 flex flex-col items-center lg:items-start top-20 lg:top-0  lg:-left-10 relative">
+      <div
+        className="text-about w-full lg:w-5/12 flex flex-col items-center lg:items-start top-20 lg:top-0  lg:-left-10 relative"
+        data-aos="fade-right"
+        data-aos-offset="100"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+      >
         <div className="about-title ">
           <h1 className="text-4xl text-secondary">About me</h1>
         </div>

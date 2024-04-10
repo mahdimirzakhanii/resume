@@ -8,8 +8,14 @@ function Portfolio() {
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-3xl text-center relative flex w-fit mx-auto">
         Portfolio
       </h1>
-      <div className="portfolio-link w-11/12 mx-auto flex flex-wrap flex-col md:flex-row justify-around items-center">
-        <div className="portfolio-box w-full my-10 lg:mt-20  flex justify-start relative ">
+      <div className="portfolio-link w-11/12 mx-auto flex flex-wrap flex-col md:flex-row justify-around items-center overflow-hidden">
+        <div
+          className="portfolio-box w-full my-10 lg:mt-20  flex justify-start relative "
+          data-aos="fade-right"
+          data-aos-offset="10"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-sine"
+        >
           <div className="w-10/12 mx-auto md:mx-0 md:w-5/12 rounded-md relative group">
             <img src={p1} className="rounded-md " alt="" />
             <div className="before:bg-black before:opacity-0 group-hover:before:opacity-50 before:rounded-md before:absolute before:inset-0 before:transition-all before:duration-700 before:ease-in-out"></div>{" "}
@@ -24,7 +30,13 @@ function Portfolio() {
           </div>{" "}
         </div>
 
-        <div className="portfolio-box w-full my-10 lg:mt-20 flex justify-end relative ">
+        <div
+          className="portfolio-box w-full my-10 lg:mt-20 flex justify-end relative "
+          data-aos="fade-left"
+          data-aos-offset="10"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-sine"
+        >
           <div className="w-10/12 md:w-5/12 mx-auto md:mx-0 rounded-md relative md:bottom-56 md:right-14 group">
             <img src={p2} alt="" className="rounded-md " />
             <div className="before:bg-black  before:opacity-0 group-hover:before:opacity-50 before:rounded-md before:absolute before:inset-0 before:transition-all before:duration-700 before:ease-in-out"></div>

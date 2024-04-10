@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="footer relative pb-5 md:py-36">
+    <div className="footer relative pb-5 md:pb-36">
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-3xl text-center relative flex w-fit mx-auto">
         Contact me
       </h1>
@@ -19,7 +19,9 @@ function Footer() {
         className="block mx-auto my-10"
         alt=""
       />
-      <div className="social flex flex-col md:flex-row w-full lg:w-6/12 mx-auto justify-evenly relative top-0 lg:top-14">
+      <div className="social flex flex-col md:flex-row w-full lg:w-6/12 mx-auto justify-evenly relative top-0 lg:top-14"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom">
         <div className="socials my-3 mx-auto md:mx-0 md:my-0 flex justify-start md:justify-center items-center w-full ">
           <MdEmail className="text-secondary text-3xl lg:text-3xl ms-3 me-1 md:mx-0" />
           <a className="text-social flex justify-center text-xl lg:text-3xl items-start dark:text-primary text-tertiary before:content-[':'] md:before:content-none before:mx-1 md:mx-0">

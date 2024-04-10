@@ -8,11 +8,15 @@ import { Typewriter } from "react-simple-typewriter";
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { IoClose } from "react-icons/io5";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Header({ toggleDarkMode, isOpen, onClose }) {
   const [theme, setTheme] = useState(true);
   const [show, setShow] = useState(true);
   const [hasScrolled, setHasScrolled] = useState(false);
+
+  AOS.init();
 
   // start hamburger menu
   const checkSize = () => {
@@ -187,8 +191,14 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
       {/* end navbar  */}
 
       {/* start header-info  */}
-      <div className="info w-full mt-52 flex flex-wrap flex-col-reverse lg:flex-row justify-around items-center">
-        <div className="name w-10/12 md:w-6/12 flex items-start flex-col relative top-12 lg:top-0 lg:left-52">
+      <div className="info w-full mt-44 h-[400px] flex flex-wrap flex-col-reverse lg:flex-row justify-around items-center overflow-hidden">
+        <div
+          className="name w-10/12 md:w-6/12 flex items-start flex-col relative top-12 lg:top-0 lg:left-52"
+          data-aos="fade-right"
+          data-aos-offset="100"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+        >
           <div className="hello flex items-end ">
             <h1 className="dark:text-primary text-tertiary relative text-5xl lg:text-6xl ">
               Hello
@@ -214,7 +224,7 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
           <div className="developer mt-0 lg:mt-6">
             <h3 className="dark:text-primary text-tertiary text-3xl md:text-4xl ">
               <Typewriter
-                words={["Front-End Developer" , "Web Developer"] }
+                words={["Front-End Developer", "Web Developer"]}
                 loop={5}
                 cursor
                 cursorStyle="|"
@@ -233,7 +243,13 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
             </button>
           </div>
         </div>
-        <div className="img-header flex justify-center bottom-20 lg:top-0 relative w-6/12">
+        <div
+          className="img-header flex justify-center bottom-20 lg:top-0 relative w-6/12 "
+          data-aos="fade-left"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-sine"
+        >
           <div className="border-img absolute border-4 border-secondary w-full md:w-9/12 lg:w-4/12 h-[280px] lg:h-[330px] left-[7vw] md:left-[12vw] lg:left-[19vw] top-10 rounded-xl"></div>
           <img
             src={myImg}
