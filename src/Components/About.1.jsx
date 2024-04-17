@@ -1,5 +1,6 @@
-import imgAbout from "../assets/img/8.png";
-function About() {
+import imgAbout from "../assets/img/me.jpg";
+
+export function About() {
   return (
     <div className="about overflow-hidden flex relative flex-col lg:flex-row justify-around items-center mt-56 ">
       {/* start image about  */}
@@ -14,7 +15,7 @@ function About() {
           <div className="bg-secondary opacity-25 rounded-full w-[280px] h-[280px] md:w-[380px] md:h-[380px] relative"></div>
           <img
             src={imgAbout}
-            className="rounded-full absolute border-8 border-secondary w-[250px] h-[250px] md:w-[350px] md:h-[350px] object-cover "
+            className="rounded-full absolute border-8 border-secondary w-[250px] h-[250px] md:w-[350px] md:h-[350px] "
             alt=""
           />
         </div>
@@ -49,5 +50,3 @@ function About() {
     </div>
   );
 }
-
-export default About;

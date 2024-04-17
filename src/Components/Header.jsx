@@ -191,28 +191,29 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
       {/* end navbar  */}
 
       {/* start header-info  */}
-      <div className="info w-full mt-44 h-[400px] flex flex-wrap flex-col-reverse lg:flex-row justify-around items-center overflow-hidden">
+      <div className="info w-full mt-44 lg:h-full flex flex-wrap flex-col-reverse lg:flex-row justify-around items-center ">
         <div
-          className="name w-10/12 md:w-6/12 flex items-start flex-col relative top-12 lg:top-0 lg:left-52"
+          className="name w-10/12 md:w-6/12 flex items-start flex-col relative top-10 lg:top-0 lg:left-52 overflow-hidden"
           data-aos="fade-right"
           data-aos-offset="100"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
         >
-          <div className="hello flex items-end ">
+          <div className="hello flex items-end relative ">
             <h1 className="dark:text-primary text-tertiary relative text-5xl lg:text-6xl ">
               Hello
             </h1>
-            <span className=" top-0 left-full mt-1 h-2 w-2 bg-secondary rounded-full"></span>
-            <h4 className="dark:text-primary text-tertiary text-3xl lg:text-4xl">
+            <span className="absolute bottom-1  left-[104%] xl:left-[9.5vw] mt-1 h-3 w-3 bg-secondary rounded-full"></span>
+            <h4 className="dark:text-primary absolute  left-[125%] xl:left-[10.5vw] text-tertiary text-3xl lg:text-4xl">
               I&apos;am
             </h4>
           </div>
-          <div className="fullname relative h-32  mt-4">
+          
+          <div className="fullname relative h-32  mt-4 ">
             <p className=" text-secondary right-2 text-8xl lg:text-9xl relative">
               M
             </p>
-            <div className="relative left-[80px] md:left-[9vw] lg:left-[7vw] xl:left-[4vw] 2xl:left-[7vw] bottom-[84px] lg:bottom-[104px]">
+            <div className="relative left-[42%] xl:left-[4vw] 2xl:left-[7vw] bottom-[84px] lg:bottom-[104px]">
               <p className="dark:text-primary text-tertiary text-4xl lg:text-5xl">
                 AHDI
               </p>
@@ -237,7 +238,8 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
           <div className="btn-cv relative lg:left-20 mt-10 mx-auto lg:mx-0">
             <button
               type="button"
-              className="border-2 border-secondary font-semibold text-secondary py-2 relative px-5 rounded-md hover:bg-secondary hover:text-primary dark:hover:text-tertiary transition-all ease-linear duration-200"
+              className="btn-cv font-semibold text-secondary py-2 px-5 border-none rounded-none dark:hover:text-tertiary"
+              // className="border-2 border-secondary font-semibold text-secondary py-2 relative px-5 rounded-md hover:bg-secondary hover:text-primary dark:hover:text-tertiary transition-all ease-linear duration-200"
             >
               Download CV
             </button>
@@ -245,10 +247,8 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
         </div>
         <div
           className="img-header flex justify-center bottom-20 lg:top-0 relative w-6/12 "
-          data-aos="fade-left"
-          data-aos-offset="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-sine"
+          data-aos="zoom-in-up"
+          data-aos-duration="2000"
         >
           <div className="border-img absolute border-4 border-secondary w-full md:w-9/12 lg:w-4/12 h-[280px] lg:h-[330px] left-[7vw] md:left-[12vw] lg:left-[19vw] top-10 rounded-xl"></div>
           <img
