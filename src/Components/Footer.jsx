@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="footer relative pb-5 md:pb-36">
+       <div className="footer relative  pb-48 md:pb-36">
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-3xl text-center relative flex w-fit mx-auto">
         Contact me
       </h1>
