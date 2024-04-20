@@ -1,4 +1,3 @@
-// import { NavLink } from "react-router-dom";
 import logo from "../assets/img/logo3.png";
 import myImg from "../assets/img/me.jpg";
 import { BsSunFill } from "react-icons/bs";
@@ -15,6 +14,7 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
   const [theme, setTheme] = useState(true);
   const [show, setShow] = useState(true);
   const [hasScrolled, setHasScrolled] = useState(false);
+
 
   AOS.init();
 
@@ -71,9 +71,9 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
 
         <div className="nav flex items-center w-5/12 relative ">
           {show && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 md:static">
+            <div className="fixed inset-0 overflow-hidden bg-black bg-opacity-50 z-50 md:static">
               <ul
-                className={`flex flex-col absolute  w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${
+                className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${
                   show ? "md:flex" : "hidden"
                 }`}
               >
@@ -93,7 +93,7 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
                     spy={true}
                     smooth={true}
                     offset={-100}
-                    duration={500}
+                    duration={1000}
                     className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                     onClick={() => {
                       if (window.innerWidth < 768) setShow(false);
@@ -108,7 +108,7 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
                     spy={true}
                     smooth={true}
                     offset={-200}
-                    duration={500}
+                    duration={1000}
                     className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                     onClick={() => {
                       if (window.innerWidth < 768) setShow(false);
@@ -123,7 +123,7 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
                     spy={true}
                     smooth={true}
                     offset={-150}
-                    duration={500}
+                    duration={1000}
                     className="text-lg  dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                     onClick={() => {
                       if (window.innerWidth < 768) setShow(false);
@@ -138,7 +138,7 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
                     spy={true}
                     smooth={true}
                     offset={-150}
-                    duration={500}
+                    duration={1000}
                     className="text-lg  dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                     activeClass=" text-secondary"
                     onClick={() => {
@@ -154,7 +154,7 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
                     spy={true}
                     smooth={true}
                     offset={-100}
-                    duration={500}
+                    duration={1000}
                     className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                     onClick={() => {
                       if (window.innerWidth < 768) setShow(false);
@@ -179,8 +179,8 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
             />
           ) : (
             <FaMoon
-              className="dark:text-primary text-tertiary text-2xl cursor-pointer"
-              onClick={() => {
+            className="dark:text-primary text-tertiary text-2xl cursor-pointer"
+            onClick={() => {
                 toggleDarkMode();
                 setTheme(!theme);
               }}
@@ -191,9 +191,9 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
       {/* end navbar  */}
 
       {/* start header-info  */}
-      <div className="info w-full mt-44 lg:h-full flex flex-wrap flex-col-reverse lg:flex-row justify-around items-center ">
+      <div className="info w-full mt-44 lg:h-full flex flex-wrap flex-col lg:flex-row justify-around items-center ">
         <div
-          className="name w-10/12 md:w-6/12 flex items-start flex-col relative top-10 lg:top-0 lg:left-52 overflow-hidden"
+          className="name w-10/12 md:w-6/12 flex items-start flex-col relative bottom-5 lg:top-0 lg:left-52 overflow-hidden"
           data-aos="fade-right"
           data-aos-offset="100"
           data-aos-easing="ease-in-sine"
@@ -208,7 +208,7 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
               I&apos;am
             </h4>
           </div>
-          
+
           <div className="fullname relative h-32  mt-4 ">
             <p className=" text-secondary right-2 text-8xl lg:text-9xl relative">
               M
@@ -235,18 +235,21 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
               />
             </h3>
           </div>
-          <div className="btn-cv relative lg:left-20 mt-10 mx-auto lg:mx-0">
-            <button
-              type="button"
-              className="btn-cv font-semibold text-secondary py-2 px-5 border-none rounded-none dark:hover:text-tertiary"
-              // className="border-2 border-secondary font-semibold text-secondary py-2 relative px-5 rounded-md hover:bg-secondary hover:text-primary dark:hover:text-tertiary transition-all ease-linear duration-200"
+          <div className="btn-cv relative py-[7px] lg:left-20 mt-10 mx-auto lg:mx-0">
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={1000}
+              className="btn-cv font-semibold cursor-pointer text-secondary px-4 border-none rounded-none hover:text-primary dark:hover:text-tertiary"
             >
-              Download CV
-            </button>
+              Know More
+            </Link>
           </div>
         </div>
         <div
-          className="img-header flex justify-center bottom-20 lg:top-0 relative w-6/12 "
+          className="img-header flex justify-center top-28 lg:top-0 relative w-6/12 "
           data-aos="zoom-in-up"
           data-aos-duration="2000"
         >

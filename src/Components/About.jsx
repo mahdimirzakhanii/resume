@@ -33,7 +33,7 @@ function About() {
           <h1 className="text-4xl text-secondary">About me</h1>
         </div>
         <div className="about-text w-10/12 lg:w-11/12">
-          <p className="dark:text-primary text-tertiary text-xl lg:text-[21px] mt-4 leading-loose  text-justify ">
+          <p className="dark:text-primary text-tertiary text-lg lg:text-[21px] mt-4 leading-loose text-center lg:text-start  ">
             I am Mahdi Mirzakhani, 21 years old, living in Tehran. I am a
             software engineering student with a profound interest in my field. I
             have been active in the Front-end development area for about a year

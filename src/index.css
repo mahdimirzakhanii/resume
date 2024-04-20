@@ -160,8 +160,6 @@
 
 @layer components {
   @media screen and (min-width: 768px) {
-
-
     .socials {
       position: relative;
     }
