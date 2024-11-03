@@ -1,5 +1,5 @@
-import p1 from "../assets/img/p1.png";
-import p2 from "../assets/img/p2.png";
+import p1 from "../../public/assets/img/p1.png";
+import p2 from "../../public/assets/img/p2.png";
 import { HiLink } from "react-icons/hi";
 
 function Portfolio() {

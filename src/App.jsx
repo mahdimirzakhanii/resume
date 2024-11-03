@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div className={`App  ${isDarkMode ? "bg-primary" : "bg-tertiary"}`}>
+      <div className={`App ${isDarkMode ? "bg-primary" : "bg-tertiary"}`}>
         <header>
           <Header toggleDarkMode={toggleDarkMode} />
         </header>

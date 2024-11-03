@@ -1,5 +1,5 @@
-import logo from "../assets/img/logo3.png";
-import myImg from "../assets/img/me.jpg";
+import logo from "../../public/assets/img/logo3.png";
+import myImg from "../../public/assets/img/me.jpg";
 import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -14,7 +14,6 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
   const [theme, setTheme] = useState(true);
   const [show, setShow] = useState(true);
   const [hasScrolled, setHasScrolled] = useState(false);
-
 
   AOS.init();
 
@@ -179,8 +178,8 @@ function Header({ toggleDarkMode, isOpen, onClose }) {
             />
           ) : (
             <FaMoon
-            className="dark:text-primary text-tertiary text-2xl cursor-pointer"
-            onClick={() => {
+              className="dark:text-primary text-tertiary text-2xl cursor-pointer"
+              onClick={() => {
                 toggleDarkMode();
                 setTheme(!theme);
               }}

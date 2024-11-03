@@ -1,4 +1,5 @@
-import imgAbout from "../assets/img/8.png";
+import imgAbout from "../../public/assets/img/8.png";
+
 function About() {
   return (
     <div className="about overflow-hidden flex relative flex-col lg:flex-row justify-around items-center mt-56 ">

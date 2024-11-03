@@ -1,4 +1,4 @@
-import logo from "../assets/img/logo3.png";
+import logo from "../../public/assets/img/logo3.png";
 import { MdEmail } from "react-icons/md";
 import { BsTelegram } from "react-icons/bs";
 import { FaInstagramSquare } from "react-icons/fa";
