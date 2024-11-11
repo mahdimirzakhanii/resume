@@ -65,7 +65,7 @@ function Skils() {
               className=" flex justify-center relative w-6/12 md:w-5/12 lg:w-4/12 h-40 lg:h-56 my-11 lg:my-8 group"
             >
               <div
-                className={`w-11/12 lg:w-9/12 h-52 bg-dark dark:bg-ligh dark:bg-ligh lg:h-64 lg:my-8 mx-1 rounded-ss-xl rounded-ee-xl lg:rounded-ss-3xl lg:rounded-ee-3xl border-y-2 border-y-secondary border-x-0  bejustify-between relative flex flex-col items-center `}
+                className={`w-11/12 lg:w-9/12  h-52 bg-dark dark:bg-ligh dark:bg-ligh lg:h-64 lg:my-8 mx-1 rounded-ss-xl rounded-ee-xl lg:rounded-ss-3xl lg:rounded-ee-3xl border-y-2 border-y-secondary border-x-0  bejustify-between relative flex flex-col items-center `}
               >
                 <div className="bg-secondary relative flex justify-center items-center top-3 lg:w-fit rounded-full p-2">
                   <img
