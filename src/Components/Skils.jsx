@@ -6,42 +6,42 @@ function Skils() {
     {
       name: "HTML",
       progress: 70,
-      img: "./public/assets/img/html2.png",
+      img: "/assets/img/html2.png",
     },
     {
       name: "CSS",
       progress: 65,
-      img: "./public/assets/img/Css2.png",
+      img: "/assets/img/Css2.png",
     },
     {
       name: "JavaScript",
       progress: 40,
-      img: "./public/assets/img/javascript.png",
+      img: "/assets/img/javascript.png",
     },
     {
       name: " React.Js",
       progress: 40,
-      img: "./public/assets/img/react2.png",
+      img: "/assets/img/react2.png",
     },
     {
       name: " BootStrap",
       progress: 60,
-      img: "./public/assets/img/bootstrap2.png",
+      img: "/assets/img/bootstrap2.png",
     },
     {
       name: "Tailwind",
       progress: 60,
-      img: "./public/assets/img/tailwind2.png",
+      img: "/assets/img/tailwind2.png",
     },
     {
       name: "Git",
       progress: 40,
-      img: "./public/assets/img/Git2.png",
+      img: "/assets/img/Git2.png",
     },
     {
       name: "Material UI",
       progress: 40,
-      img: "./public/assets/img/material-ui2.png",
+      img: "/assets/img/material-ui2.png",
     },
   ];
 
