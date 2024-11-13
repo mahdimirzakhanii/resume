@@ -1,10 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import About from "./Components/About";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import Portfolio from "./Components/Portfolio";
-import Skils from "./Components/Skils";
 import { useState } from "react";
+import Home from "./Components/Home.jsx";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -15,33 +11,11 @@ function App() {
   };
 
   return (
-    <>
-      <div className={`App ${isDarkMode ? "bg-primary" : "bg-tertiary"}`}>
-        <header>
-          <Header toggleDarkMode={toggleDarkMode} />
-        </header>
-        <main>
-          <div>
-            <About />
-          </div>
-          <div>
-            <Skils />
-          </div>
-          <div>
-            <Portfolio />
-          </div>
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
+    <div className={`App ${isDarkMode ? "bg-primary" : "bg-tertiary"}`}>
       <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/skills" element={<Skils />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Footer />} />
+        <Route path="/" element={<Home toggleDarkMode={toggleDarkMode} />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
