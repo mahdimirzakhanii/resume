@@ -4,15 +4,15 @@ import Skils from "./Skils.jsx";
 import Portfolio from "./Portfolio.jsx";
 import Footer from "./Footer.jsx";
 
-const Home = ({toggleDarkMode}) => {
-    return (
-        <div>
-            <Header toggleDarkMode={toggleDarkMode}/>
-            <About/>
-            <Skils/>
-            <Portfolio/>
-            <Footer/>
-        </div>
-    )
-}
-export default Home
+const Home = () => {
+  return (
+    <div>
+      <Header />
+      <About />
+      <Skils />
+      <Portfolio />
+      <Footer />
+    </div>
+  );
+};
+export default Home;
