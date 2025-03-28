@@ -1,7 +1,7 @@
 import { Flat } from "@alptugidin/react-circular-progress-bar";
 
-function Skils() {
-  const skils = [
+function Skills() {
+  const skills = [
     {
       name: "JavaScript",
       progress: 40,
@@ -40,7 +40,7 @@ function Skils() {
   ];
 
   return (
-    <div className=" my-32 lg:my-64 relative z-20">
+    <div className="skills my-32 lg:my-64 relative z-20">
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-3xl text-center relative flex w-fit mx-auto">
         Skills
       </h1>
@@ -51,7 +51,7 @@ function Skils() {
         data-aos-delay="500"
         data-aos-offset="0"
       >
-        {skils?.map((item, index) => (
+        {skills?.map((item, index) => (
           <div
             key={index}
             className="flex justify-center relative w-6/12 md:w-5/12 lg:w-4/12 h-40 lg:h-56 my-11 lg:my-8 "
@@ -92,4 +92,4 @@ function Skils() {
   );
 }
 
-export default Skils;
+export default Skills;

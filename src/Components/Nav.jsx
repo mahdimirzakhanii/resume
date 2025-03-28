@@ -75,7 +75,7 @@ const Nav = ({ toggleDarkMode }) => {
                   to="header"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={-200}
                   duration={1000}
                   className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                   onClick={() => {
@@ -105,14 +105,14 @@ const Nav = ({ toggleDarkMode }) => {
                   to="skills"
                   spy={true}
                   smooth={true}
-                  offset={-150}
+                  offset={-200}
                   duration={1000}
                   className="text-lg  dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                   onClick={() => {
                     if (window.innerWidth < 768) setShow(false);
                   }}
                 >
-                  skills
+                  Skills
                 </Link>
               </li>
               <li>
@@ -120,7 +120,7 @@ const Nav = ({ toggleDarkMode }) => {
                   to="portfolio"
                   spy={true}
                   smooth={true}
-                  offset={-150}
+                  offset={-200}
                   duration={1000}
                   className="text-lg  dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                   activeClass=" text-secondary"
@@ -128,7 +128,7 @@ const Nav = ({ toggleDarkMode }) => {
                     if (window.innerWidth < 768) setShow(false);
                   }}
                 >
-                  portfolio
+                  Portfolio
                 </Link>
               </li>
               <li>
@@ -136,21 +136,20 @@ const Nav = ({ toggleDarkMode }) => {
                   to="footer"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={-200}
                   duration={1000}
                   className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                   onClick={() => {
                     if (window.innerWidth < 768) setShow(false);
                   }}
                 >
-                  contact
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
         )}
       </div>
-
       <div className="theme w-2/12 flex justify-center relative right-10 lg:right-0">
         {theme ? (
           <BsSunFill
