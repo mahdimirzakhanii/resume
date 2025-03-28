@@ -22,8 +22,8 @@ function Footer() {
       <div className="social  h-24 flex flex-col md:flex-row w-full lg:w-6/12 mx-auto justify-evenly relative top-0 lg:top-14">
         <div className="socials  my-3 mx-auto md:mx-0 md:my-0 flex justify-start md:justify-center items-center w-full ">
           <MdEmail className=" text-secondary text-3xl lg:text-3xl ms-3 me-1 md:mx-0 " />
-          <a className="text-social flex justify-center text-xl lg:text-3xl items-start dark:text-primary text-tertiary before:mx-1 md:mx-0">
-            mahdimirzakhani85@gmail.com
+          <a className="text-social fl  ex justify-center text-xl lg:text-3xl items-start dark:text-primary text-tertiary before:mx-1 md:mx-0">
+            mahdi.mirzakhani48@gmail.com
           </a>
         </div>
 
