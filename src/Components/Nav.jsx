@@ -33,9 +33,8 @@ const Nav = ({ toggleDarkMode }) => {
   }, []);
   return (
     <div
-      className={`top-header top-0 fixed duration-700 dark:bg-tertiary bg-primary z-50 h-20 container w-full flex justify-around items-center ${
-        hasScrolled ? "shadow-md" : ""
-      } `}
+      className={`top-header top-0 fixed duration-700 dark:bg-tertiary bg-primary z-50 h-20 w-full flex justify-around items-center 
+        ${hasScrolled ? "shadow-md" : ""} `}
     >
       <div className="flex flex-row-reverse md:flex-row justify-between md:justify-around w-10/12 md:w-2/12">
         <div className="logo">
@@ -56,9 +55,8 @@ const Nav = ({ toggleDarkMode }) => {
         {show && (
           <div className="fixed inset-0 overflow-hidden bg-black bg-opacity-50 z-50 md:static">
             <ul
-              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${
-                show ? "md:flex" : "hidden"
-              }`}
+              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${show ? "md:flex" : "hidden"
+                }`}
             >
               <li>
                 <button

@@ -1,55 +1,60 @@
 import p1 from "../../public/assets/img/p1.png";
 import p2 from "../../public/assets/img/p2.png";
+import p3 from "../../public/assets/img/online-shop.png";
 import { HiLink } from "react-icons/hi";
+
+const portfolio = [
+  // {
+  //   "href": "https://mahdimirzakhanii.github.io/login/",
+  //   "img": p1,
+  // },
+  {
+    "href": "https://technotive.vercel.app/",
+    "img": p2,
+  },
+  {
+    "href": "https://mobile-zone.vercel.app/",
+    "img": p3,
+  },
+  
+]
+
 
 function Portfolio() {
   return (
-    <div className="portfolio">
-      <h1 className="title dark:text-primary text-tertiary text-2xl md:text-3xl text-center relative flex w-fit mx-auto">
+    <div className="portfolio flex items-center justify-center flex-col">
+      <h1 className="title dark:text-primary text-tertiary text-2xl md:text-3xl text-center relative flex w-fit ">
         Portfolio
       </h1>
-      <div className=" portfolio-link w-11/12 mx-auto flex flex-wrap flex-col md:flex-row justify-around items-center overflow-hidden">
-        <div
-          className=" portfolio-box w-full my-10 lg:mt-20  flex justify-start relative "
-          data-aos="fade-right"
-          data-aos-offset="10"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-sine"
-        >
-          <div className=" w-10/12 mx-auto md:mx-0 md:w-5/12 rounded-md relative group">
-            <img src={p1} className="rounded-md " alt="" />
-            <div className="before:bg-black before:opacity-0 group-hover:before:opacity-50 before:rounded-md before:absolute before:inset-0 before:transition-all before:duration-700 before:ease-in-out"></div>{" "}
-            <a
-              href="https://mahdimirzakhanii.github.io/login/"
-              className="bg-secondary text-md lg:text-xl py-1 px-4 lg:py-2 lg:px-5 z-30 absolute mx-auto flex rounded-md opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 bottom-4 lg:bottom-16 left-[26vw] md:left-[14vw] lg:left-56"
-              target="_blank"
-            >
-              Project
-              <HiLink className="relative left-3 top-1" />
-            </a>
-          </div>{" "}
-        </div>
+      <div className="portfolio-link w-11/12 mb-40 flex flex-wrap flex-col md:flex-row justify-around items-center overflow-hidden">
+        {portfolio?.map((item, index) => {
+          const animationDirection = index % 2 === 0 ? "fade-right" : "fade-left";
+          const isOddItem = index % 2 !== 0;
 
-        <div
-          className="portfolio-box w-full my-10 lg:mt-20 flex justify-end relative "
-          data-aos="fade-left"
-          data-aos-offset="10"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-sine"
-        >
-          <div className="w-10/12 md:w-5/12 mx-auto md:mx-0 rounded-md relative md:bottom-56 md:right-14 group">
-            <img src={p2} alt="" className="rounded-md " />
-            <div className="before:bg-black  before:opacity-0 group-hover:before:opacity-50 before:rounded-md before:absolute before:inset-0 before:transition-all before:duration-700 before:ease-in-out"></div>
-            <a
-              href="https://mahdimirzakhanii.github.io/Technotive/"
-              className="bg-secondary text-md lg:text-xl py-1 px-4 lg:py-2 lg:px-5 z-30 absolute mx-auto flex rounded-md  opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 bottom-4 lg:bottom-16 left-[26vw] md:left-[14vw] lg:left-56"
-              target="_blank"
+          return (
+            <div
+              key={index}
+              data-aos={animationDirection}
+              data-aos-offset="10"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className={`portfolio-box w-10/12 md:w-[45%] flex flex-col relative ${isOddItem ? "md:mt-40" : "md:mt-0"}`}
             >
-              Project
-              <HiLink className="relative left-3 top-1" />
-            </a>
-          </div>
-        </div>
+              <div className="flex items-center justify-center md:mx-0 shadow-md rounded-md relative group">
+                <img src={item?.img} className="rounded-md group-hover:brightness-50 duration-700" alt="" />
+                <a
+                  href={item?.href}
+                  className="bg-secondary text-sm lg:text-xl opacity-0 group-hover:opacity-100 w-32 py-1.5 z-30 absolute flex items-center justify-center gap-2 rounded-md transition-all duration-700 ease-in-out bottom-4 lg:bottom-16 hover:!opacity-100"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Project
+                  <HiLink />
+                </a>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
