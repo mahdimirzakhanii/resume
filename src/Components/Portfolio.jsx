@@ -16,7 +16,7 @@ const portfolio = [
     "href": "https://mobile-zone.vercel.app/",
     "img": p3,
   },
-  
+
 ]
 
 
@@ -26,11 +26,10 @@ function Portfolio() {
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-3xl text-center relative flex w-fit ">
         Portfolio
       </h1>
-      <div className="portfolio-link w-11/12 mb-40 flex flex-wrap flex-col md:flex-row justify-around items-center overflow-hidden">
+      <div className="portfolio-link w-11/12 my-10 lg:mb-20 flex flex-wrap flex-col gap-10  md:flex-row justify-around items-center overflow-hidden">
         {portfolio?.map((item, index) => {
           const animationDirection = index % 2 === 0 ? "fade-right" : "fade-left";
           const isOddItem = index % 2 !== 0;
-
           return (
             <div
               key={index}
@@ -38,9 +37,9 @@ function Portfolio() {
               data-aos-offset="10"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
-              className={`portfolio-box w-10/12 md:w-[45%] flex flex-col relative ${isOddItem ? "md:mt-40" : "md:mt-0"}`}
+              className={`portfolio-box w-full md:w-[45%] flex flex-col relative ${isOddItem ? "md:mt-40" : "md:mt-0"}`}
             >
-              <div className="flex items-center justify-center md:mx-0 shadow-md rounded-md relative group">
+              <div className="flex items-center justify-center md:mx-0 shadow-md rounded-md  relative group">
                 <img src={item?.img} className="rounded-md group-hover:brightness-50 duration-700" alt="" />
                 <a
                   href={item?.href}
