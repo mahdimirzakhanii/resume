@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 function Header() {
   AOS.init();
   return (
-    <div className=" w-full mt-44 z-20 lg:h-full flex flex-col lg:flex-row justify-between items-center ">
+    <div className="w-full mt-44 z-20 lg:h-full flex flex-col lg:flex-row gap-5 justify-between items-center ">
       <div
         className="w-full lg:w-1/2 gap-3 lg:gap-0 flex items-start flex-col overflow-hidden"
         data-aos="fade-right"
@@ -64,7 +64,7 @@ function Header() {
         </div>
       </div>
       <div
-        className="img-header flex justify-center items-center top-28 md:pr-28 lg:top-0 relative group "
+        className="flex justify-center items-center md:pr-28 relative group "
         data-aos="zoom-in-up"
         data-aos-duration="2000"
       >

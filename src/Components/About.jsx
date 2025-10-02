@@ -2,40 +2,35 @@ import imgAbout from "../../public/assets/img/8.png";
 
 function About() {
   return (
-    <div className="about overflow-hidden flex relative flex-col lg:flex-row justify-around items-center mt-56 ">
-      {/* start image about  */}
+    <div className="gap-10 flex  flex-col lg:flex-row justify-between items-center w-full ">
+
       <div
-        className="img-about relative w-full md:w-5/12"
+        className="w-full lg:w-[40%] relative flex items-center justify-center"
         data-aos="fade-left"
         data-aos-offset="100"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
       >
-        <div className="relative inset-0 flex items-center justify-center">
-          <div className="bg-secondary opacity-25 rounded-full w-[280px] h-[280px] md:w-[380px] md:h-[380px] relative"></div>
-          <img
-            src={imgAbout}
-            className="rounded-full absolute border-8 border-secondary w-[250px] h-[250px] md:w-[350px] md:h-[350px] object-cover "
-            alt=""
-          />
-        </div>
+        <div className="bg-secondary opacity-25 rounded-full w-[300px] h-[300px] md:w-[380px] md:h-[380px]"></div>
+        <img
+          src={imgAbout}
+          className="rounded-full absolute border-8 border-secondary w-[280px] h-[280px] md:w-[350px] md:h-[350px] object-cover "
+          alt=""
+        />
       </div>
-      {/* end image about  */}
 
-      {/* start text about  */}
       <div
-        className="text-about w-full lg:w-5/12 flex flex-col items-center lg:items-start top-20 lg:top-0  lg:-left-10 relative"
+        className="w-full lg:w-[60%] flex flex-col items-center lg:items-start "
         data-aos="fade-right"
         data-aos-offset="100"
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
       >
-        <div className="about-title ">
-          <h1 className="text-4xl text-secondary">About me</h1>
-        </div>
-        <div className="about-text w-10/12 lg:w-11/12">
-          <p className="dark:text-primary text-tertiary text-lg lg:text-[21px] mt-4 leading-loose text-center lg:text-start  ">
-            I am Mahdi Mirzakhani, 21 years old, living in Tehran. I am a
+        <h1 className="text-4xl font-bold text-secondary">About me</h1>
+
+        <div className="w-[80%] lg:w-[90%]">
+          <p className="dark:text-primary text-tertiary text-lg lg:text-[21px] mt-4 leading-10 text-center lg:text-start  text-wrap">
+            I am Mahdi Mirzakhani, 22 years old, living in Tehran. I am a
             software engineering student with a profound interest in my field. I
             have been active in the Front-end development area for about a year
             now, working with the React.js framework. I am deeply passionate
@@ -46,7 +41,6 @@ function About() {
           </p>
         </div>
       </div>
-      {/* end text about  */}
     </div>
   );
 }

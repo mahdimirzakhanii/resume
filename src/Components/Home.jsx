@@ -6,7 +6,7 @@ import Skills from "./Skills.jsx";
 
 const Home = () => {
   return (
-    <div className="w-[90%] md:w-[80%] flex items-center justify-center flex-col">
+    <div className="w-[90%] md:w-[80%] flex items-center justify-center gap-56 flex-col">
       <Header />
       <About />
       <Skills />
