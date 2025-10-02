@@ -33,7 +33,7 @@ const Nav = ({ toggleDarkMode }) => {
   }, []);
   return (
     <div
-      className={`top-header top-0 fixed duration-700 dark:bg-tertiary bg-primary z-50 h-20 w-full flex justify-around items-center 
+      className={`top-header top-0 fixed duration-700 dark:bg-tertiary bg-primary z-50 h-20 w-full flex justify-around items-center
         ${hasScrolled ? "shadow-md" : ""} `}
     >
       <div className="flex flex-row-reverse md:flex-row justify-between md:justify-around w-10/12 md:w-2/12">

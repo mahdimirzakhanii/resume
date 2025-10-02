@@ -16,6 +16,7 @@
     "@ramonak/react-progress-bar": "^5.2.0",
     "@tomickigrzegorz/react-circular-progress-bar": "^1.1.2",
     "aos": "^2.3.4",
+    "ogl": "^1.0.11",
     "react": "^18.2.0",
     "react-circle-progress": "^1.0.6",
     "react-circle-progress-bar": "^0.1.4",
@@ -28,6 +29,7 @@
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
+    "@types/node": "^24.5.2",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@vitejs/plugin-react": "^4.2.1",
