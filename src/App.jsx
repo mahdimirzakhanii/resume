@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <div className={`flex flex-col items-center w-full relative justify-center ${isDarkMode ? "bg-primary" : "bg-tertiary"}`}>
+    <div className={`flex flex-col items-center w-full overflow-x-hidden relative justify-center ${isDarkMode ? "bg-primary" : "bg-tertiary"}`}>
       <LightRays
         className="pointer-events-none fixed inset-0 z-[999]"
         raysOrigin="top-center"
@@ -26,7 +26,6 @@ function App() {
         noiseAmount={0.1}
         distortion={0.05}
       />
-
       <Nav toggleDarkMode={toggleDarkMode} />
       <Routes>
         <Route path="/" element={<Home toggleDarkMode={toggleDarkMode} />} />

@@ -19,7 +19,7 @@ function Header() {
           <h1 className="dark:text-primary text-tertiary text-5xl lg:text-6xl ">
             Hello
           </h1>
-          <span className="bottom-1 left-[104%] xl:left-[9.5vw] mb-1 w-2 h-2 md:h-3 md:w-3 bg-secondary rounded-full"></span>
+          <span className="bottom-1 left-[104%] xl:left-[9.5vw] mb-2 w-2 h-2 md:h-3 md:w-3 bg-secondary rounded-full"></span>
           <h4 className="dark:text-primary text-tertiary text-3xl lg:text-4xl">
             I&apos;am
           </h4>
@@ -29,7 +29,7 @@ function Header() {
           <p className=" text-secondary leading-[120px] lg:leading-[200px] font-semibold text-[150px] lg:text-[200px]">
             M
           </p>
-          <div className="flex flex-col gap-2 items-start -mb-1 lg:mb-4 lg:gap-2">
+          <div className="flex flex-col gap-2 items-start mb-1 lg:mb-4 lg:gap-2">
             <p className="dark:text-primary leading-none text-tertiary text-[40px] lg:text-6xl">
               AHDI
             </p>
