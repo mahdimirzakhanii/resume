@@ -1,5 +1,3 @@
-import { Flat } from "@alptugidin/react-circular-progress-bar";
-
 function Skills() {
   const skills = [
     {
@@ -48,7 +46,6 @@ function Skills() {
       img: "/assets/img/material-ui2.png",
     },
   ];
-
   return (
     <div className="flex flex-col items-center relative z-20 gap-20 w-full">
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-4xl text-center relative flex font-bold w-fit ">
@@ -56,10 +53,10 @@ function Skills() {
       </h1>
       <div
         className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-10"
-      data-aos="zoom-out-up"
-      data-aos-anchor-placement="top-bottom"
-      data-aos-delay="500"
-      data-aos-offset="0"
+        data-aos="zoom-out-up"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-delay="500"
+        data-aos-offset="0"
       >
         {skills?.map((item, index) => (
           <div
@@ -79,21 +76,6 @@ function Skills() {
               <h1 className="text-tertiary dark:text-primary text-lg lg:text-3xl z-50 ">
                 {item?.name}
               </h1>
-              {/* <div className="w-5/12 md:w-4/12 lg:w-5/12 relative top-[98px] md:top-[88px] lg:top-28 z-50 ">
-                <Flat
-                  progress={item?.progress}
-                  showMiniCircle={false}
-                  sx={{
-                    strokeColor: "#070f2b",
-                    bgStrokeColor: "#ebeeff",
-                    barWidth: 10,
-                    shape: "half",
-                    strokeLinecap: "square",
-                    valueColor: "#ebeeff",
-                    miniCircleColor: "#ecefff",
-                  }}
-                />
-              </div> */}
             </div>
           </div>
         ))}

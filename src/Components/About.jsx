@@ -28,7 +28,7 @@ function About() {
       >
         <h1 className="text-4xl font-bold text-secondary">About me</h1>
 
-        <div className="w-[80%] lg:w-[90%]">
+        <div className="w-full lg:w-[90%]">
           <p className="dark:text-primary text-tertiary text-lg lg:text-[21px] mt-4 leading-10 text-center lg:text-start  text-wrap">
             I am Mahdi Mirzakhani, 22 years old, living in Tehran. I am a
             software engineering student with a profound interest in my field. I
