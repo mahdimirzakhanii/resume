@@ -30,7 +30,7 @@ function Header() {
           <p className=" text-secondary leading-[120px] lg:leading-[200px] font-semibold text-[150px] lg:text-[200px]">
             M
           </p>
-          <div className="flex flex-col gap-2 items-start mb-1 lg:mb-4 lg:gap-2">
+          <div className="flex flex-col gap-2 items-start -mb-1 lg:mb-4 lg:gap-2">
             <p className="dark:text-primary leading-none text-tertiary text-[40px] lg:text-6xl">
               AHDI
             </p>

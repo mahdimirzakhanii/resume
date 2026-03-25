@@ -33,6 +33,7 @@ const Nav = ({ toggleDarkMode }) => {
   const [theme, setTheme] = useState(true);
   const [show, setShow] = useState(true);
   const [hasScrolled, setHasScrolled] = useState(false);
+
   //  hamburger menu
   const checkSize = () => {
     if (window.innerWidth < 768) {
@@ -41,6 +42,7 @@ const Nav = ({ toggleDarkMode }) => {
       setShow(true);
     }
   };
+
   useEffect(() => {
     window.addEventListener("resize", checkSize);
     checkSize();
@@ -49,7 +51,7 @@ const Nav = ({ toggleDarkMode }) => {
 
   // Remove Scroller
   useEffect(() => {
-    if (show) {
+    if (window.innerWidth < 768 && show) {
       document.body.style.overflow = "hidden"
     } else {
       document.body.style.overflow = "auto"
@@ -77,9 +79,7 @@ const Nav = ({ toggleDarkMode }) => {
           <div className="flex md:hidden flex-row-reverse md:flex-row justify-between md:justify-around ">
             <div
               className="flex justify-center items-center"
-              onClick={() => {
-                setShow(!show);
-              }}
+              onClick={() => setShow(!show)}
             >
               <RxHamburgerMenu className="text-tertiary dark:text-primary text-3xl " />
             </div>
@@ -88,14 +88,14 @@ const Nav = ({ toggleDarkMode }) => {
 
         <div className={`justify-center gap-2 items-center w-[50%] ${show ? "flex" : "hidden"}`}>
           {show && (
-            <div className="fixed md:static flex items-center p-5 justify-between w-full right-0 top-0 min-h-screen overflow-hidden bg-black/40 backdrop-blur-xl md:bg-transparent z-50 ">
+            <div className="fixed md:static flex items-center p-5 justify-between w-full right-0 top-0 min-h-screen md:min-h-fit overflow-hidden bg-black/40 backdrop-blur-xl md:backdrop-blur-none md:bg-transparent z-50 ">
               <ul
                 className={`flex flex-col min-h-screen w-full md:flex-row gap-5 justify-start items-center
                    ${show ? "md:flex " : "hidden absolute "}`}
               >
-                <li className="w-full flex items-center justify-end ">
+                <li className="w-full flex md:hidden items-center justify-end ">
                   <button
-                    className="text-tertiary text-3xl focus:bg-secondary rounded-full p-2 relative"
+                    className="text-white bg-secondary text-xl focus:bg-secondary rounded-full p-1 relative"
                     onClick={() => {
                       if (window.innerWidth < 768) setShow(false);
                     }}
@@ -104,7 +104,7 @@ const Nav = ({ toggleDarkMode }) => {
                   </button>
                 </li>
 
-                <div className="flex items-center justify-between flex-col min-h-[70vh]">
+                <div className="flex items-center justify-between w-full md:flex-row flex-col min-h-[70vh]">
                   {nav.map((item, index) => (
                     <Link
                       key={index}
