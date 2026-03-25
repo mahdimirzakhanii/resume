@@ -47,6 +47,7 @@ const Nav = ({ toggleDarkMode }) => {
     return () => window.removeEventListener("resize", checkSize);
   }, []);
 
+  // Remove Scroller
   useEffect(() => {
     if (show) {
       document.body.style.overflow = "hidden"
@@ -68,78 +69,81 @@ const Nav = ({ toggleDarkMode }) => {
       className={`top-0 fixed duration-700 dark:bg-tertiary bg-primary z-50 h-20 w-full flex justify-around items-center
         ${hasScrolled ? "shadow-md" : ""} `}
     >
-      <div className="flex flex-row-reverse md:flex-row justify-between md:justify-around w-[80%] md:w-[15%]">
-        <div className="logo">
+      <div className="flex items-center flex-row-reverse md:flex-row justify-between w-[90%] md:w-[80%]">
+
+        <div className="flex items-center flex-row md:flex-row-reverse justify-between w-[60%] md:w-fit">
           <img src={logo} width={80} height={80} alt="" />
-        </div>
 
-        <div
-          className="hamburger-icon flex justify-center items-center relative left-10 md:hidden"
-          onClick={() => {
-            setShow(!show);
-          }}
-        >
-          <RxHamburgerMenu className="text-tertiary dark:text-primary text-3xl " />
-        </div>
-      </div>
-
-      <div className="nav flex items-center w-5/12 relative ">
-        {show && (
-          <div className="fixed inset-0 overflow-hidden bg-black bg-opacity-50 z-50 md:static">
-            <ul
-              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center ${show ? "md:flex" : "hidden"
-                }`}
+          <div className="flex md:hidden flex-row-reverse md:flex-row justify-between md:justify-around ">
+            <div
+              className="flex justify-center items-center"
+              onClick={() => {
+                setShow(!show);
+              }}
             >
-              <li>
-                <button
-                  className="block md:hidden text-tertiary text-3xl focus:bg-secondary rounded-full p-2 relative"
-                  onClick={() => {
-                    if (window.innerWidth < 768) setShow(false);
-                  }}
-                >
-                  <IoClose />
-                </button>
-              </li>
-              {nav.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item?.link}
-                  spy={true}
-                  smooth={true}
-                  offset={-200}
-                  duration={1000}
-                  className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
-                  onClick={() => {
-                    if (window.innerWidth < 768) setShow(false);
-                  }}
-                >
-                  {item?.name}
-                </Link>
-              ))}
-            </ul>
+              <RxHamburgerMenu className="text-tertiary dark:text-primary text-3xl " />
+            </div>
           </div>
-        )}
+        </div>
+
+        <div className={`justify-center gap-2 items-center w-[50%] ${show ? "flex" : "hidden"}`}>
+          {show && (
+            <div className="fixed md:static flex items-center justify-between w-full inset-0 overflow-hidden bg-black md:bg-transparent z-50 ">
+              <ul
+                className={`flex flex-col w-full md:flex-row justify-around items-center
+                   ${show ? "md:flex " : "hidden absolute "}`}
+              >
+                <li>
+                  <button
+                    className="block md:hidden text-tertiary text-3xl focus:bg-secondary rounded-full p-2 relative"
+                    onClick={() => {
+                      if (window.innerWidth < 768) setShow(false);
+                    }}
+                  >
+                    <IoClose />
+                  </button>
+                </li>
+                {nav.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item?.link}
+                    spy={true}
+                    smooth={true}
+                    offset={-200}
+                    duration={1000}
+                    className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
+                    onClick={() => {
+                      if (window.innerWidth < 768) setShow(false);
+                    }}
+                  >
+                    {item?.name}
+                  </Link>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+        <div className="flex justify-center items-center">
+          {theme ? (
+            <BsSunFill
+              className="dark:text-primary text-tertiary text-2xl cursor-pointer"
+              onClick={() => {
+                toggleDarkMode();
+                setTheme(!theme);
+              }}
+            />
+          ) : (
+            <FaMoon
+              className="dark:text-primary text-tertiary text-2xl cursor-pointer"
+              onClick={() => {
+                toggleDarkMode();
+                setTheme(!theme);
+              }}
+            />
+          )}
+        </div>
       </div>
-      <div className="theme w-2/12 flex justify-center relative right-10 lg:right-0">
-        {theme ? (
-          <BsSunFill
-            className="dark:text-primary text-tertiary text-2xl cursor-pointer"
-            onClick={() => {
-              toggleDarkMode();
-              setTheme(!theme);
-            }}
-          />
-        ) : (
-          <FaMoon
-            className="dark:text-primary text-tertiary text-2xl cursor-pointer"
-            onClick={() => {
-              toggleDarkMode();
-              setTheme(!theme);
-            }}
-          />
-        )}
-      </div>
-    </div>
+    </div >
   );
 };
 
