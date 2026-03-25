@@ -88,14 +88,14 @@ const Nav = ({ toggleDarkMode }) => {
 
         <div className={`justify-center gap-2 items-center w-[50%] ${show ? "flex" : "hidden"}`}>
           {show && (
-            <div className="fixed md:static flex items-center justify-between w-full inset-0 overflow-hidden bg-black md:bg-transparent z-50 ">
+            <div className="fixed md:static flex items-center p-5 justify-between w-full right-0 top-0 min-h-screen overflow-hidden bg-black/40 backdrop-blur-xl md:bg-transparent z-50 ">
               <ul
-                className={`flex flex-col w-full md:flex-row justify-around items-center
+                className={`flex flex-col min-h-screen w-full md:flex-row gap-5 justify-start items-center
                    ${show ? "md:flex " : "hidden absolute "}`}
               >
-                <li>
+                <li className="w-full flex items-center justify-end ">
                   <button
-                    className="block md:hidden text-tertiary text-3xl focus:bg-secondary rounded-full p-2 relative"
+                    className="text-tertiary text-3xl focus:bg-secondary rounded-full p-2 relative"
                     onClick={() => {
                       if (window.innerWidth < 768) setShow(false);
                     }}
@@ -103,22 +103,25 @@ const Nav = ({ toggleDarkMode }) => {
                     <IoClose />
                   </button>
                 </li>
-                {nav.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item?.link}
-                    spy={true}
-                    smooth={true}
-                    offset={-200}
-                    duration={1000}
-                    className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
-                    onClick={() => {
-                      if (window.innerWidth < 768) setShow(false);
-                    }}
-                  >
-                    {item?.name}
-                  </Link>
-                ))}
+
+                <div className="flex items-center justify-between flex-col min-h-[70vh]">
+                  {nav.map((item, index) => (
+                    <Link
+                      key={index}
+                      to={item?.link}
+                      spy={true}
+                      smooth={true}
+                      offset={-200}
+                      duration={1000}
+                      className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
+                      onClick={() => {
+                        if (window.innerWidth < 768) setShow(false);
+                      }}
+                    >
+                      {item?.name}
+                    </Link>
+                  ))}
+                </div>
               </ul>
             </div>
           )}
