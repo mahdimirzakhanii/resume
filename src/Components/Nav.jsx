@@ -6,6 +6,29 @@ import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { IoClose } from "react-icons/io5";
 
+const nav = [
+  {
+    name: "Home",
+    link: "header",
+  },
+  {
+    name: "About",
+    link: "about",
+  },
+  {
+    name: "Skills",
+    link: "skills",
+  },
+  {
+    name: "Portfolio",
+    link: "portfolio",
+  },
+  {
+    name: "Contact me",
+    link: "footer",
+  },
+];
+
 const Nav = ({ toggleDarkMode }) => {
   const [theme, setTheme] = useState(true);
   const [show, setShow] = useState(true);
@@ -31,6 +54,7 @@ const Nav = ({ toggleDarkMode }) => {
     };
     window.addEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div
       className={`top-0 fixed duration-700 dark:bg-tertiary bg-primary z-50 h-20 w-full flex justify-around items-center
@@ -55,8 +79,9 @@ const Nav = ({ toggleDarkMode }) => {
         {show && (
           <div className="fixed inset-0 overflow-hidden bg-black bg-opacity-50 z-50 md:static">
             <ul
-              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${show ? "md:flex" : "hidden"
-                }`}
+              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${
+                show ? "md:flex" : "hidden"
+              }`}
             >
               <li>
                 <button
@@ -68,9 +93,10 @@ const Nav = ({ toggleDarkMode }) => {
                   <IoClose />
                 </button>
               </li>
-              <li>
+              {nav.map((item, index) => (
                 <Link
-                  to="header"
+                  key={index}
+                  to={item?.link}
                   spy={true}
                   smooth={true}
                   offset={-200}
@@ -80,70 +106,9 @@ const Nav = ({ toggleDarkMode }) => {
                     if (window.innerWidth < 768) setShow(false);
                   }}
                 >
-                  Home
+                  {item?.name}
                 </Link>
-              </li>
-              <li>
-                <Link
-                  to="about"
-                  spy={true}
-                  smooth={true}
-                  offset={-200}
-                  duration={1000}
-                  className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
-                  onClick={() => {
-                    if (window.innerWidth < 768) setShow(false);
-                  }}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="skills"
-                  spy={true}
-                  smooth={true}
-                  offset={-200}
-                  duration={1000}
-                  className="text-lg  dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
-                  onClick={() => {
-                    if (window.innerWidth < 768) setShow(false);
-                  }}
-                >
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="portfolio"
-                  spy={true}
-                  smooth={true}
-                  offset={-200}
-                  duration={1000}
-                  className="text-lg  dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
-                  activeClass=" text-secondary"
-                  onClick={() => {
-                    if (window.innerWidth < 768) setShow(false);
-                  }}
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="footer"
-                  spy={true}
-                  smooth={true}
-                  offset={-200}
-                  duration={1000}
-                  className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
-                  onClick={() => {
-                    if (window.innerWidth < 768) setShow(false);
-                  }}
-                >
-                  Contact
-                </Link>
-              </li>
+              ))}
             </ul>
           </div>
         )}

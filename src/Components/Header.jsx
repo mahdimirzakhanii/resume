@@ -1,4 +1,4 @@
-import myImg from "../../public/assets/img/prof2 (3).jpg";
+import myImg from "../../public/assets/img/profile.jpg";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 import AOS from "aos";
@@ -7,7 +7,8 @@ import "aos/dist/aos.css";
 function Header() {
   AOS.init();
   return (
-    <div className="w-full mt-44 z-20 lg:h-full flex flex-col lg:flex-row gap-5 justify-between items-center ">
+    
+    <div className="header w-full mt-44 z-20 lg:h-full flex flex-col lg:flex-row gap-5 justify-between items-center ">
       <div
         className="w-full lg:w-1/2 gap-3 lg:gap-0 flex items-start flex-col overflow-hidden"
         data-aos="fade-right"
@@ -69,10 +70,10 @@ function Header() {
         data-aos-duration="2000"
       >
         <div className="border-img absolute bg-gradient-to-b from-transparent to-secondary
-          w-full md:w-[300px] h-[400px] left-4 top-4 rounded-br-[100px]"></div>
+         w-[260px] h-[350px] left-0 -bottom-2 rounded-br-[100px]"></div>
         <img
           src={myImg}
-          className="h-[400px] relative rounded-br-[100px]"
+          className="h-[400px] w-[250px] relative rounded-br-[100px]"
           alt=""
         />
       </div>

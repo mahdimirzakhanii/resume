@@ -5,70 +5,60 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
+const socials = [
+  {
+    link: "https://mailto:mahdi.mirzakhani48@gmail.com",
+    icon: <MdEmail />,
+    title: "mahdi.mirzakhani48@gmail.com",
+  },
+  {
+    link: "https://t.me/mahdimirzakhanii",
+    icon: <BsTelegram />,
+    title: "@mahdimirzakhanii",
+  },
+  {
+    link: "https://instagram.com/mahdimirzakhanii4/",
+    icon: <FaInstagramSquare />,
+    title: "@mahdimirzakhanii4",
+  },
+  {
+    link: "https://www.linkedin.com/in/mahdi-mirzakhani-b566b4281/",
+    icon: <FaLinkedin />,
+    title: "@mahdi-mirzakhani",
+  },
+  {
+    link: "https://github.com/mahdimirzakhanii",
+    icon: <FaGithub />,
+    title: "@mahdimirzakhanii",
+  },
+];
+
 function Footer() {
   return (
-    <div className="footer relative pb-52 md:pb-36">
-      <h1 className="title dark:text-primary text-tertiary text-2xl md:text-3xl text-center relative flex w-fit mx-auto">
+    <div className="footer flex items-center flex-col justify-center gap-20 w-full mb-5 lg:mb-20">
+      <h1 className="title dark:text-primary text-tertiary text-2xl md:text-4xl text-center relative flex font-bold w-fit ">
         Contact me
       </h1>
 
-      <img
-        src={logo}
-        width={80}
-        height={80}
-        className="block mx-auto my-10"
-        alt=""
-      />
-      <div className="social  h-24 flex flex-col md:flex-row w-full lg:w-6/12 mx-auto justify-evenly relative top-0 lg:top-14">
-        <div className="socials  my-3 mx-auto md:mx-0 md:my-0 flex justify-start md:justify-center items-center w-full ">
-          <MdEmail className=" text-secondary text-3xl lg:text-3xl ms-3 me-1 md:mx-0 " />
-          <a className="text-social fl  ex justify-center text-xl lg:text-3xl items-start dark:text-primary text-tertiary before:mx-1 md:mx-0">
-            mahdi.mirzakhani48@gmail.com
-          </a>
-        </div>
-
-        <div className="socials my-3 mx-auto md:mx-0 md:my-0 flex justify-start md:justify-center items-center w-full">
-          <BsTelegram className="text-secondary text-3xl lg:text-3xl ms-3 me-1 md:mx-0 " />
-          <a
-            target="_blank"
-            href="https://t.me/mahdi_mirzakhanii"
-            className="text-social dark:text-primary text-tertiary text-xl lg:text-3xl before:mx-1 md:mx-0"
-          >
-            mahdi_mirzakhanii
-          </a>
-        </div>
-
-        <div className="socials my-3 mx-auto md:mx-0 md:my-0 flex justify-start md:justify-center items-center w-full">
-          <FaInstagramSquare className="text-secondary text-3xl lg:text-3xl ms-3 me-1 md:mx-0" />
-          <a
-            target="_blank"
-            href="https://instagram.com/mahdimirzakhanii4/"
-            className="text-social dark:text-primary text-tertiary text-xl lg:text-3xl before:mx-1 md:mx-0"
-          >
-            mahdimirzakhanii4
-          </a>
-        </div>
-
-        <div className="socials my-3 mx-auto md:mx-0 md:my-0 flex justify-start md:justify-center items-center w-full">
-          <FaLinkedin className="text-secondary text-3xl lg:text-3xl ms-3 me-1 md:mx-0" />
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/mahdi-mirzakhani-b566b4281/"
-            className="text-social dark:text-primary text-tertiary text-xl lg:text-3xl before:mx-1 md:mx-0"
-          >
-            mahdi-mirzakhani
-          </a>
-        </div>
-
-        <div className="socials my-3 mx-auto md:mx-0 md:my-0 flex justify-start md:justify-center items-center w-full">
-          <FaGithub className="text-secondary text-3xl lg:text-3xl ms-3 me-1 md:mx-0" />
-          <a
-            target="_blank"
-            href="https://github.com/mahdimirzakhanii"
-            className="text-social dark:text-primary text-tertiary text-xl lg:text-3xl before:mx-1 md:mx-0"
-          >
-            mahdimirzakhanii
-          </a>
+      <div className="flex items-center justify-center w-full flex-col gap-20">
+        <img src={logo} width={100} height={100} alt="" />
+        <div className="social flex flex-col md:flex-row w-full lg:w-[70%] justify-between gap-5 relative ">
+          {socials?.map((item, index) => (
+            <div
+              key={index}
+              className="socials  flex justify-start md:justify-center items-center w-full "
+            >
+              <span className=" text-secondary text-3xl lg:text-3xl ">
+                {item?.icon}
+              </span>
+              <a
+                href={item?.link}
+                className="text-social flex justify-center text-xl lg:text-3xl items-start dark:text-primary text-tertiary before:mx-1 md:mx-0"
+              >
+                {item?.title}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </div>

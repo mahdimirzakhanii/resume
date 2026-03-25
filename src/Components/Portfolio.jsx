@@ -19,7 +19,7 @@ function Portfolio() {
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-4xl text-center relative flex font-bold w-fit ">
         Portfolio
       </h1>
-      <div className="portfolio-link w-11/12 my-10 lg:mb-20 flex flex-wrap flex-col gap-10 md:flex-row justify-around items-center overflow-hidden">
+      <div className="portfolio-link w-11/12 flex flex-wrap flex-col gap-10 md:flex-row justify-around items-center overflow-hidden">
         {portfolio?.map((item, index) => {
           const animationDirection = index % 2 === 0 ? "fade-right" : "fade-left";
           const isOddItem = index % 2 !== 0;
