@@ -1,4 +1,4 @@
-import logo from "../../public/assets/img/logo3.png";
+import logo from "/src/assets/img/logo3.png";
 import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -79,9 +79,8 @@ const Nav = ({ toggleDarkMode }) => {
         {show && (
           <div className="fixed inset-0 overflow-hidden bg-black bg-opacity-50 z-50 md:static">
             <ul
-              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${
-                show ? "md:flex" : "hidden"
-              }`}
+              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${show ? "md:flex" : "hidden"
+                }`}
             >
               <li>
                 <button

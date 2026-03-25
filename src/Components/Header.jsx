@@ -1,4 +1,4 @@
-import myImg from "../../public/assets/img/profile.jpg";
+import myImg from "/src/assets/img/profile.jpg";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 import AOS from "aos";
@@ -7,8 +7,8 @@ import "aos/dist/aos.css";
 function Header() {
   AOS.init();
   return (
-    
-    <div className="header w-full mt-44 z-20 lg:h-full flex flex-col lg:flex-row gap-5 justify-between items-center ">
+
+    <div className="header w-full mt-32 md:mt-44 z-20 lg:h-full flex flex-col lg:flex-row gap-5 justify-between items-center ">
       <div
         className="w-full lg:w-1/2 gap-3 lg:gap-0 flex items-start flex-col overflow-hidden"
         data-aos="fade-right"

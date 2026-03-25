@@ -1,8 +1,11 @@
-import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import Home from "./Components/Home";
 import Nav from "./Components/Nav";
 import LightRays from "./Components/LightRays";
+import Footer from "./Components/Footer";
+import Portfolio from "./Components/Portfolio";
+import Skills from "./Components/Skills";
+import About from "./Components/About";
+import Header from "./Components/Header";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -27,9 +30,14 @@ function App() {
         distortion={0.05}
       />
       <Nav toggleDarkMode={toggleDarkMode} />
-      <Routes>
-        <Route path="/" element={<Home toggleDarkMode={toggleDarkMode} />} />
-      </Routes>
+      <div className="w-[90%] md:w-[80%] flex items-center justify-center gap-56 flex-col">
+        <Header />
+        <About />
+        <Skills />
+        <Portfolio />
+        <Footer />
+      </div>
+
     </div>
   );
 }
