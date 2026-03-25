@@ -47,6 +47,14 @@ const Nav = ({ toggleDarkMode }) => {
     return () => window.removeEventListener("resize", checkSize);
   }, []);
 
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }, [show])
+
   // navbar scrolled
   useEffect(() => {
     const handleScroll = () => {
@@ -79,12 +87,12 @@ const Nav = ({ toggleDarkMode }) => {
         {show && (
           <div className="fixed inset-0 overflow-hidden bg-black bg-opacity-50 z-50 md:static">
             <ul
-              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center  ${show ? "md:flex" : "hidden"
+              className={`flex flex-col absolute w-full h-full bg-black md:bg-transparent md:flex-row justify-around items-center ${show ? "md:flex" : "hidden"
                 }`}
             >
               <li>
                 <button
-                  className="block md:hidden text-tertiary text-3xl focus:bg-secondary rounded-full p-2 relative  "
+                  className="block md:hidden text-tertiary text-3xl focus:bg-secondary rounded-full p-2 relative"
                   onClick={() => {
                     if (window.innerWidth < 768) setShow(false);
                   }}
