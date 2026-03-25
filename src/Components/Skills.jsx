@@ -7,47 +7,47 @@ const skills = [
   {
     name: "React.Js",
     progress: 60,
-    img: "/assets/img/react2.png",
+    img: "/src/assets/img/react2.png",
   },
   {
     name: "Next.js",
     progress: 20,
-    img: "/assets/img/next.png",
+    img: "/src/assets/img/next.png",
   },
   {
     name: "TypeScript",
     progress: 30,
-    img: "/assets/img/typescript.png",
+    img: "/src/assets/img/typescript.png",
   },
   {
     name: "Tailwind",
     progress: 70,
-    img: "/assets/img/tailwind2.png",
+    img: "/src/assets/img/tailwind2.png",
   },
   {
     name: "Material UI",
     progress: 40,
-    img: "/assets/img/material-ui2.png",
+    img: "/src/assets/img/material-ui2.png",
   },
   {
     name: "BootStrap",
     progress: 60,
-    img: "/assets/img/bootstrap2.png",
+    img: "/src/assets/img/bootstrap2.png",
   },
   {
     name: "Redux Toolkit",
     progress: 30,
-    img: "/assets/img/Redux2.png",
+    img: "/src/assets/img/Redux2.png",
   },
   {
     name: "Git",
     progress: 40,
-    img: "/assets/img/Git2.png",
+    img: "/src/assets/img/Git2.png",
   },
 ];
 function Skills() {
   return (
-    <div className="skills flex flex-col items-center relative z-20 gap-20 w-full">
+    <div className="skills flex flex-col items-center relative z-20 gap-10 md:gap-20 w-full">
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-4xl text-center relative flex font-bold w-fit ">
         Skills
       </h1>

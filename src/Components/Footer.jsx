@@ -35,12 +35,12 @@ const socials = [
 
 function Footer() {
   return (
-    <div className="footer flex items-center flex-col justify-center gap-20 w-full mb-5 lg:mb-20">
+    <div className="footer flex items-center flex-col justify-center gap-10 md:gap-20 w-full mb-5 lg:mb-20">
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-4xl text-center relative flex font-bold w-fit ">
         Contact me
       </h1>
 
-      <div className="flex items-center justify-center w-full flex-col gap-20">
+      <div className="flex items-center justify-center w-full flex-col gap-10 md:gap-20">
         <img src={logo} width={100} height={100} alt="" />
         <div className="social flex flex-col md:flex-row w-full lg:w-[70%] justify-between gap-5 relative ">
           {socials?.map((item, index) => (

@@ -2,7 +2,7 @@ import imgAbout from "/src/assets/img/8.png";
 
 function About() {
   return (
-    <div className="about gap-10 flex flex-col lg:flex-row justify-between items-center w-full ">
+    <div className="about gap-10 flex flex-col-reverse lg:flex-row justify-between items-center w-full ">
       <div
         className="w-full lg:w-[40%] relative flex items-center justify-center"
         data-aos="fade-left"

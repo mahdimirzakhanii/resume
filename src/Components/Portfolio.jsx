@@ -15,7 +15,7 @@ const portfolio = [
 
 function Portfolio() {
   return (
-    <div className="portfolio flex items-center justify-center flex-col">
+    <div className="portfolio flex items-center justify-center gap-10 md:gap-20 flex-col">
       <h1 className="title dark:text-primary text-tertiary text-2xl md:text-4xl text-center relative flex font-bold w-fit ">
         Portfolio
       </h1>

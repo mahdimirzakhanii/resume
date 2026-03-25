@@ -30,7 +30,7 @@ function App() {
         distortion={0.05}
       />
       <Nav toggleDarkMode={toggleDarkMode} />
-      <div className="w-[90%] md:w-[80%] flex items-center justify-center gap-56 flex-col">
+      <div className="w-[90%] md:w-[80%] flex items-center justify-center gap-20 md:gap-56 flex-col">
         <Header />
         <About />
         <Skills />
