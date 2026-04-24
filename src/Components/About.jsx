@@ -29,7 +29,7 @@ function About() {
 
         <div className="w-full lg:w-[90%]">
           <p className="dark:text-primary text-tertiary text-lg lg:text-[21px] mt-4 leading-10 text-center lg:text-start  text-wrap">
-            I am Mahdi Mirzakhani, 22 years old, living in Tehran. I am a
+            I am Mahdi Mirzakhani, 23 years old, living in Tehran. I am a
             software engineering student with a profound interest in my field. I
             have been active in the Front-end development area for about a year
             now, working with the React.js framework. I am deeply passionate
