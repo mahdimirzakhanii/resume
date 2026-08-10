@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 
 const socials = [
   {
-    link: "https://mailto:mahdi.mirzakhani48@gmail.com",
+    link: "mailto:mahdi.mirzakhani48@gmail.com",
     icon: <MdEmail />,
     title: "mahdi.mirzakhani48@gmail.com",
   },
