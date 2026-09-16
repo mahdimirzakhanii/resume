@@ -1,9 +1,4 @@
 const skills = [
-  // {
-  //   name: "JavaScript",
-  //   progress: 40,
-  //   img: "/assets/img/javascript.png",
-  // },
   {
     name: "React.Js",
     progress: 60,
@@ -13,6 +8,11 @@ const skills = [
     name: "Next.js",
     progress: 20,
     img: "/src/assets/img/next.png",
+  },
+  {
+    name: "JavaScript",
+    progress: 40,
+    img: "/src/assets/img/javascript.png",
   },
   {
     name: "TypeScript",
@@ -29,11 +29,11 @@ const skills = [
     progress: 40,
     img: "/src/assets/img/material-ui2.png",
   },
-  {
-    name: "BootStrap",
-    progress: 60,
-    img: "/src/assets/img/bootstrap2.png",
-  },
+  // {
+  //   name: "BootStrap",
+  //   progress: 60,
+  //   img: "/src/assets/img/bootstrap2.png",
+  // },
   {
     name: "Redux Toolkit",
     progress: 30,
