@@ -1,4 +1,4 @@
-import logo from "/src/assets/img/logo3.png";
+import logo from "/img/logo3.png";
 import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -111,7 +111,7 @@ const Nav = ({ toggleDarkMode }) => {
                       to={item?.link}
                       spy={true}
                       smooth={true}
-                      offset={-200}
+                      offset={-100}
                       duration={1000}
                       className="text-lg dark:md:text-primary dark:hover:text-secondary text-tertiary link-hover cursor-pointer"
                       onClick={() => {

@@ -2,47 +2,47 @@ const skills = [
   {
     name: "React.Js",
     progress: 60,
-    img: "/src/assets/img/react2.png",
+    img: "/img/react2.png",
   },
   {
     name: "Next.js",
     progress: 20,
-    img: "/src/assets/img/next.png",
+    img: "/img/next.png",
   },
   {
     name: "JavaScript",
     progress: 40,
-    img: "/src/assets/img/javascript.png",
+    img: "/img/javascript.png",
   },
   {
     name: "TypeScript",
     progress: 30,
-    img: "/src/assets/img/typescript.png",
+    img: "/img/typescript.png",
   },
   {
     name: "Tailwind",
     progress: 70,
-    img: "/src/assets/img/tailwind2.png",
+    img: "/img/tailwind2.png",
   },
   {
     name: "Material UI",
     progress: 40,
-    img: "/src/assets/img/material-ui2.png",
+    img: "/img/material-ui2.png",
   },
   // {
   //   name: "BootStrap",
   //   progress: 60,
-  //   img: "/src/assets/img/bootstrap2.png",
+  //   img: "/img/bootstrap2.png",
   // },
   {
     name: "Redux Toolkit",
     progress: 30,
-    img: "/src/assets/img/Redux2.png",
+    img: "/img/Redux2.png",
   },
   {
     name: "Git",
     progress: 40,
-    img: "/src/assets/img/Git2.png",
+    img: "/img/Git2.png",
   },
 ];
 function Skills() {

@@ -1,4 +1,4 @@
-import imgAbout from "/src/assets/img/8.png";
+import imgAbout from "/img/8.png";
 
 function About() {
   return (
@@ -29,14 +29,9 @@ function About() {
 
         <div className="w-full lg:w-[90%]">
           <p className="dark:text-primary text-tertiary text-lg lg:text-[21px] mt-4 leading-10 text-center lg:text-start  text-wrap">
-            I am Mahdi Mirzakhani, 23 years old, living in Tehran. I am a
-            software engineering student with a profound interest in my field. I
-            have been active in the Front-end development area for about a year
-            now, working with the React.js framework. I am deeply passionate
-            about advancing in this field and spend every day studying various
-            aspects of frontend development to enhance my skills. I have a
-            strong inclination towards teamwork and participating in group
-            projects.
+            I'm a Front-end Developer specializing in React.js, with around three years of professional experience building modern and responsive web applications.
+            I'm passionate about creating clean, maintainable, and user-friendly interfaces. I continuously work on improving my technical skills, exploring modern frontend technologies, and finding better ways to solve development challenges.
+            I enjoy collaborating with others, sharing ideas, and contributing to team projects. I'm always eager to learn, take on new challenges, and grow as a developer.
           </p>
         </div>
       </div>

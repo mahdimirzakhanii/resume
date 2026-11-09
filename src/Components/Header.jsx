@@ -1,4 +1,4 @@
-import myImg from "/src/assets/img/profile.jpg";
+import myImg from "/img/profile.jpg";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 import AOS from "aos";
